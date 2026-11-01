@@ -40,7 +40,9 @@ Unless you turn them off, the app sends a few anonymous events to PostHog, so we
 
 The only detail the app adds to an event is the visa type you were using, such as "US B-1/B-2". It never adds the names you give applications, the items you ticked, or anything you type.
 
-PostHog's software also adds a random ID made when the app first runs, the app's version, and your phone's operating system and its version. The random ID isn't linked to your name, email, phone number or Google account. We've told PostHog to discard IP addresses. PostHog stores the events in the European Union.
+Each event also carries a random ID made when the app first runs, the time of the event, the app's version, and your phone's operating system and its version. The app removes the other details PostHog's software would add, such as your phone's model, screen size, language and time zone. The random ID isn't linked to your name, email, phone number or Google account. We've told PostHog to discard IP addresses and not to work out your location from them: each event carries a flag that turns PostHog's location lookup off, and the lookup is also switched off for the whole project. PostHog stores the events in the European Union.
+
+When the app first sends an event, PostHog's software also downloads its own settings from PostHog. That request contains no details about you, your phone or your applications.
 
 ## Crash reports (Sentry)
 
