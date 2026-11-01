@@ -46,7 +46,7 @@ When the app first sends an event, PostHog's software also downloads its own set
 
 ## Crash reports (Sentry)
 
-Unless you turn them off, the app sends a report to Sentry when it hits an error, so we can fix it. A report contains the error, where in the app's code it happened, the app's version, and your phone's model and operating system version. It doesn't contain the names you give applications or anything you type. Sentry is told not to store IP addresses, and stores reports in the European Union.
+Unless you turn them off, the app sends a report to Sentry when it hits an error, so we can fix it. A report contains the error, where in the app's code it happened, the app's version, your phone's model and operating system version, and the name and version of Sentry's software. It doesn't contain the names you give applications or anything you type. Sentry is told not to store IP addresses, and stores reports in the European Union.
 
 ## Turning reports off
 
